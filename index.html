@@ -4,94 +4,291 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>H3 Mobile - 应用介绍</title>
+  <meta name="description" content="英雄无敌3移动版 H3 Mobile，经典奇幻回合制策略游戏的安卓移动端体验。">
+  <title>英雄无敌3移动版 | H3 Mobile</title>
+
   <style>
+    :root {
+      --bg: #0b1920;
+      --panel: #132a31;
+      --gold: #e6c47d;
+      --text: #f2ead8;
+      --muted: #b9c8ca;
+    }
+
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
-      background: #102a32;
-      color: #f5e9c8;
-      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
       line-height: 1.8;
     }
+
+    a { color: var(--gold); }
+
     header {
-      padding: 80px 20px;
+      min-height: 390px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      background: linear-gradient(135deg, #173d48, #091b24);
+      padding: 65px 20px;
+      background:
+        radial-gradient(ellipse at 50% 10%, #426273 0%, transparent 62%),
+        linear-gradient(145deg, #183b46, #09151d);
+      border-bottom: 1px solid #8d7545;
     }
-    h1 { font-size: 48px; color: #d8b66a; }
-    h2 { color: #d8b66a; }
-    main { max-width: 900px; margin: auto; padding: 35px 24px; }
-    section { margin-bottom: 42px; }
+
+    h1 {
+      font-size: clamp(32px, 5vw, 58px);
+      color: var(--gold);
+      margin: 0 0 12px;
+      letter-spacing: 3px;
+    }
+
+    .subtitle {
+      font-size: 22px;
+      color: #f7eed7;
+      margin: 0 0 22px;
+    }
+
+    .intro {
+      max-width: 620px;
+      margin: auto;
+      color: var(--muted);
+    }
+
+    .tag {
+      display: inline-block;
+      border: 1px solid #9d875b;
+      color: var(--gold);
+      padding: 5px 17px;
+      border-radius: 30px;
+      font-size: 13px;
+      margin-top: 25px;
+    }
+
+    main {
+      max-width: 1080px;
+      margin: auto;
+      padding: 55px 24px;
+    }
+
+    section { margin-bottom: 65px; }
+
+    h2 {
+      color: var(--gold);
+      font-size: 26px;
+      border-left: 4px solid var(--gold);
+      padding-left: 15px;
+      margin-bottom: 25px;
+    }
+
+    .lead {
+      font-size: 17px;
+      color: var(--muted);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .feature {
+      background: var(--panel);
+      border: 1px solid #36515b;
+      border-radius: 12px;
+      padding: 27px;
+      min-height: 170px;
+    }
+
+    .feature h3 {
+      color: var(--gold);
+      margin: 0 0 10px;
+      font-size: 19px;
+    }
+
+    .feature p {
+      color: var(--muted);
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .screenshots {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .screenshots img {
+      width: 100%;
+      border: 1px solid #72613f;
+      border-radius: 10px;
+      display: block;
+    }
+
+    .note {
+      padding: 22px 25px;
+      border: 1px solid #36515b;
+      background: #12252c;
+      border-radius: 10px;
+      color: var(--muted);
+    }
+
     footer {
-      padding: 25px;
       text-align: center;
-      background: #091b24;
+      background: #071218;
+      padding: 34px 20px;
+      color: #9eafb1;
+      font-size: 13px;
+      border-top: 1px solid #30454d;
     }
-    a { color: #e5c77e; }
+
+    @media (max-width: 700px) {
+      header { min-height: 310px; }
+      .subtitle { font-size: 17px; }
+      .features, .screenshots {
+        grid-template-columns: 1fr;
+      }
+      main { padding: 35px 18px; }
+    }
   </style>
 </head>
+
 <body>
-  <header>
-    <h1>H3 Mobile</h1>
-    <p>基于 VCMI 开源引擎的 Android 回合制策略游戏客户端</p>
-    <p>探索地图 · 回合策略 · 单人游戏</p>
-  </header>
 
-  <main>
-    <section>
-      <h2>应用介绍</h2>
-      <p>
-        H3 Mobile 是一款基于 VCMI 开源引擎开发的
-        Android 回合制策略游戏客户端，
-        提供地图探索、单人游戏和游戏存档等功能。
-      </p>
-    </section>
+<header>
+  <div>
+    <h1>英雄无敌3移动版</h1>
+    <p class="subtitle">H3 Mobile</p>
+    <p class="intro">
+      经典奇幻世界，掌中再启征程。<br>
+      探索广袤地图，发展城堡，招募英雄，
+      在安卓设备上体验回合制策略游戏的魅力。
+    </p>
+    <span class="tag">Android · 横屏游戏 · 开发测试版</span>
+  </div>
+</header>
 
-    <section>
-      <h2>主要功能</h2>
-      <ul>
-        <li>Android 横屏触控操作</li>
-        <li>单人回合制策略游戏</li>
-        <li>游戏地图及存档管理</li>
-        <li>好友联机功能开发中</li>
-        <li>微信账号登录功能申请接入中</li>
-      </ul>
-    </section>
+<main>
 
-    <section>
-      <h2>开发状态</h2>
-      <p>
-        当前应用处于测试开发阶段，尚未上架应用市场。
-        部分在线功能仍在开发和测试。
-      </p>
-    </section>
+  <section>
+    <h2>游戏介绍</h2>
+    <p class="lead">
+      英雄无敌3移动版（H3 Mobile）是一款面向安卓设备的
+      经典回合制策略游戏客户端。
+      玩家可以探索奇幻地图、收集资源、
+      建设城堡、招募军队并展开策略战斗。
+    </p>
+    <p class="lead">
+      游戏针对移动设备提供横屏操作体验，
+      保留经典的地图探索、英雄培养和战术决策玩法。
+    </p>
+  </section>
 
-    <section>
-      <h2>关于项目</h2>
-      <p>
-        本项目基于开源 VCMI 引擎进行开发，
-        不是原游戏版权方的官方产品。
-      </p>
-      <p>
-        VCMI 项目：
-        <a href="https://vcmi.eu/">https://vcmi.eu/</a>
-      </p>
-    </section>
+  <section>
+    <h2>游戏特色</h2>
+    <div class="features">
 
-    <section>
-      <h2>隐私政策</h2>
-      <p>
-        当前版本支持游客使用。
-        计划中的微信登录功能可能涉及微信用户标识、
-        昵称及头像等必要信息。
-        相关功能上线前将公布正式隐私政策，
-        明确数据处理方式和用户权利。
-      </p>
-    </section>
-  </main>
+      <div class="feature">
+        <h3>⚔ 英雄与战斗</h3>
+        <p>
+          招募英雄、培养技能、统率不同兵种，
+          通过战术部署赢得回合制战斗。
+        </p>
+      </div>
 
-  <footer>
-    H3 Mobile · Android 测试版本
-  </footer>
+      <div class="feature">
+        <h3>🏰 城堡经营</h3>
+        <p>
+          发展城镇、建造设施、收集资源，
+          打造属于自己的奇幻军团。
+        </p>
+      </div>
+
+      <div class="feature">
+        <h3>🗺 地图探索</h3>
+        <p>
+          探索地图、发现宝藏、挑战敌人，
+          体验丰富的策略冒险。
+        </p>
+      </div>
+
+      <div class="feature">
+        <h3>📱 移动端体验</h3>
+        <p>
+          支持 Android 横屏操作，
+          针对手机和平板提供触控交互。
+        </p>
+      </div>
+
+      <div class="feature">
+        <h3>💾 游戏存档</h3>
+        <p>
+          支持游戏进度管理，
+          方便随时继续未完成的冒险。
+        </p>
+      </div>
+
+      <div class="feature">
+        <h3>🤝 好友联机（开发中）</h3>
+        <p>
+          计划支持好友创建房间、
+          加入多人对局及分享游戏邀请。
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 上传真实截图后，可以取消本节注释。
+  <section>
+    <h2>游戏画面</h2>
+    <div class="screenshots">
+      <img src="images/home.png" alt="H3 Mobile 游戏首页">
+      <img src="images/game.png" alt="英雄无敌3移动版游戏画面">
+    </div>
+  </section>
+  -->
+
+  <section>
+    <h2>微信登录与好友功能</h2>
+    <div class="note">
+      当前版本支持游客进入单人游戏。
+      微信账号登录与好友联机正在接入及测试中。
+      相关功能完成后，将提供玩家身份管理、
+      好友邀请和多人游戏体验。
+    </div>
+  </section>
+
+  <section>
+    <h2>应用信息</h2>
+    <p>应用名称：H3 Mobile（英雄无敌3移动版）</p>
+    <p>运行平台：Android</p>
+    <p>应用类型：回合制策略游戏</p>
+    <p>开发状态：测试阶段，尚未上架应用市场</p>
+    <p>应用版本：开发测试版</p>
+  </section>
+
+  <section>
+    <h2>项目说明</h2>
+    <div class="note">
+      本项目为非官方爱好者开发的移动端游戏客户端，
+      不代表原游戏版权方或商标持有人。
+      游戏相关名称、图像及素材的权利归各自权利人所有。
+      使用者应合法取得相关游戏资源。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div>H3 Mobile · 英雄无敌3移动版</div>
+  <div>非官方爱好者项目 · Android 测试版本</div>
+</footer>
+
 </body>
 </html>
